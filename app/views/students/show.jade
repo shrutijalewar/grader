@@ -1,0 +1,21 @@
+extends ../shared/template
+block content
+  h2 Students
+
+  table
+    thead
+      tr
+        th Name
+        th Average
+        th Letter Grade
+        th Suspended
+        th Honor Roll
+    tbody
+      each student in students
+        tr
+          td(style='background-color:#{student.color}'): a(href='/items/#{item._id}')= item.name
+          td #{student.avg}
+          td #{student.letter}
+          td #{student.isSuspeded}
+          td #{student.isHonorRoll}
+

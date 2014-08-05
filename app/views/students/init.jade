@@ -1,0 +1,10 @@
+extends ../shared/template
+block content
+  h2 Students
+  h2 Add New Students
+
+  form(method='post', action='/students')
+    input(name='name', type='text', placeholder='name', autofocus=true)
+    input(name='color', type='color', placeholder='color')
+    button Add 
+
